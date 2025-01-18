@@ -9,5 +9,122 @@ phone: +1 403 370 9896
 email: "tadam.sgr@gmail.com"
 linkedin: "www.linkedin.com/in/trevoraseeger/"
 date: "`r Sys.Date()`"
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(
+  inputFile, 
+  encoding = encoding, 
+  output_dir = "C:\\Users\\tadam\\OneDrive\\Work Related\\Job Search 2025") })
 output: vitae::hyndman
 ---
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+options(tinytex.verbose = TRUE)
+```
+
+
+```{r}
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(dplyr, tibble, vitae, pkgsearch)
+
+```
+
+
+
+
+# Professional Summary
+
+Experienced Data Scientist and Research Analyst with a strong background in machine learning, statistics, big data, and project management. Adept at converting complex datasets into meaningful insights that drive business improvements and strategic decisions. Strong collaborator with a talent for simplifying intricate concepts for non-technical audiences. Committed to continuous learning and leveraging advanced technologies to address real-world challenges. 
+
+
+
+
+# Technical Skills
+
+- Machine Learning: scikitlearn, pytorch, tensorflow, keras, clustering, dimensionality reduction, neural networks, reinforcement learning. 
+- Statistics: Insight generation, ANOVA, linear/polytomous regression, predictive modelling, cross-validation. 
+- Software: R, RMarkdown, Python, Git, SQL, MATLAB, SPSS, Tableau, process automation.
+- Research: Data integrity and privacy, clinical trials research, research ethics, technical writing, study documentation, knowledge translation, recruitment, and retention.
+- Project Management: Personnel management, project lifecycle management, interdisciplinary and multi-team Coordination.
+
+
+
+
+# Projects
+```{r}
+# https://github.com/TadamSgr/Regressions-Template
+# https://github.com/TadamSgr/ML_Templates
+```
+
+
+# Experience
+
+Research Analyst, Data Science Specialist;  The University of Calgary,                    2020-Present
+
+- In a Data Scientist role, lead analytics in a health economics research lab where my responsibilities primarily focus on rare diseases and service use across Canada. 
+- Extract, transform and load complex data, including free text, longitudinal, and clinical data for hundreds of rare disease patients. Codifying clinical data with regular expressions.
+- Develop analysis plans and carry data from collection through to modelling and publication.
+- Employed descriptive, regression, and cross-validation models on sparse, longitudinal datasets.
+
+
+
+Research Associate; The University of Calgary                                        March 2018 - January 2020 
+- Coordinated the daily operations of a multi-university and multi-site clinical research project, collaborating with industry partners: Vivametrica and the Alberta Bone and Joint Health Institute. Priority was to balance stakeholder needs with feasible practices.
+- Built, coordinated, and maintained databases, then queried data and performed longitudinal analyses of variance. Presented these queries to stakeholders and laypeople. 
+
+
+Project Coordinator; The University of Calgary                             September 2016 - December 2017 
+- In a clinical research lab studying adult brain injury and neurorehabilitation, managed ethics and compliance, and conducted recruitment, surveys and follow-ups to ensure minimal attrition (<10%). 
+- Advised the team on statistical analyses, authored manuscripts for publication, and coordinated multiple research projects. 
+- Collaborated with multiple concurrent research and industry teams. 
+
+
+# Education
+
+```{r}
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Master of Data Science & Analytics—Health Data", "2019-2021", "The University of Calgary", "Calgary, Canada",
+  "Master of Science—Neurosciences", "2012-2016", "The University of Calgary", "Calgary, Canada",
+  "Bachelors of Health Sciences (Honours)", "2007-2011", "The University of Calgary", "Calgary, Canada"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+# Leadership & Volunteer Experience
+Bike Tour Leadership Team – Route Coordinator                                                           2017 – Present
+Branch Out Neurological Foundation
+Spearheaded roadside planning and coordination for an annual bike tour involving 200 cyclists. Responsibilities included route planning, building signage, and procuring donations.
+
+
+
+# Publications
+
+```{r}
+library(dplyr)
+knitr::write_bib(c("vitae", "tibble"), "packages.bib")
+
+bibliography_entries("packages.bib") %>%
+  arrange(desc(author$family), issued)
+```
+Degeling K, Tagimacruz T, MacDonald KV, Seeger TA, Fooks K, Venkataramanan V, Boycott KM, Bernier FP, Mendoza-Londono R, Hartley T, Hayeems RZ, Marshall DA; Care4Rare Canada. Exome Sequencing in the Diagnostic Pathway for Suspected Rare Genetic Diseases: Does the Order of Testing Affect its Cost-Effectiveness? Appl Health Econ Health Policy. 2024 Dec 30. doi: 10.1007/s40258-024-00936-7. Epub ahead of print. PMID: 39739296.
+Seeger TA, Tabor J, Sick S, Schneider KJ, Jenne C, La P, Talai AS, Rajashekar D, Mouches P, Forkert ND, Emery C, Debert CT. The Association of Saliva Cytokines and Pediatric Sports-Related Concussion Outcomes. J Head Trauma Rehabil. 2020 Sep/Oct;35(5):354-362. doi: 10.1097/HTR.0000000000000605. PMID: 32881769.
+King R & Seeger TA, Wang M, Li Pi Shan R, McGovern C, Knox J, Patel L, Fung T, Sajobi T, Debert C (2020). Early Supported Discharge for Neurorehabilitation Following Acquired Brain Injury. Frontiers in Neurology, 11(November), 1–9. https://doi.org/10.3389/fneur.2020.596526
+
+
+# R Packages
+
+```{r rpkgs}
+pkgsearch::ps("Seeger",size = 100) %>%
+  filter(purrr::map_lgl(package_data, ~ grepl("Trevor A. Seeger", .x$Author, fixed = TRUE))) %>%
+  arrange(desc(downloads_last_month)) %>%
+  brief_entries(
+    what = title,
+    when = lubridate::year(date),
+    with = description
+  )
+```
