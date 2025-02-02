@@ -9,9 +9,6 @@ phone: +1 403 370 9896
 email: "tadam.sgr@gmail.com"
 linkedin: "www.linkedin.com/in/trevoraseeger/"
 date: "`r Sys.Date()`"
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding, 
-  output_dir = "C:/Users/tadam/OneDrive/Work Related/Job Search 2025") })
 output: vitae::hyndman
 ---
 
@@ -33,7 +30,7 @@ pacman::p_load(dplyr, tibble, vitae, pkgsearch)
 
 # Professional Summary
 
-Experienced Data Scientist and Research Analyst with a strong background in machine learning, statistics, big data, and project management. Adept at converting complex datasets into meaningful insights that drive business improvements and strategic decisions. Strong collaborator with a talent for simplifying intricate concepts for non-technical audiences. Committed to continuous learning and leveraging advanced technologies to address real-world challenges. 
+Experienced Data Scientist and Research Analyst with a strong background in healthcare research, machine learning, statistics, big data, and project management. Adept at converting complex datasets into meaningful insights that drive business improvements and strategic decisions. Strong collaborator with a talent for simplifying intricate concepts for non-technical audiences. Committed to continuous learning and leveraging advanced technologies to address real-world challenges. 
 
 
 
@@ -50,35 +47,50 @@ Experienced Data Scientist and Research Analyst with a strong background in mach
 
 
 # Projects
-```{r}
-# https://github.com/TadamSgr/Regressions-Template
-# https://github.com/TadamSgr/ML_Templates
-```
+
+*Regression Template*   https://github.com/TadamSgr/Regressions-Template 
+
+A repository with templates for functions to expedite running regressions in R
+
+
+*Machine Learning Templates*   https://github.com/TadamSgr/ML_Templates
+
+A repository with templates for machine learning algorithms in python
 
 
 # Experience
 
-Research Analyst, Data Science Specialist;  The University of Calgary, 2020-Present
+Research Analyst, Data Science Specialist;  _The University of Calgary_, (2020-Present)
 
-- In a Data Scientist role, lead analytics in a health economics research lab where my responsibilities primarily focus on rare diseases and service use across Canada. 
-- Develop analysis plans and carry data from collection through to modelling and publication.
-- Extract, transform and load complex data, including free text, longitudinal, and clinical data for hundreds of rare disease patients. Codifying clinical data with regular expressions.
-- Employed descriptive, classification, regression, and cross-validation models on sparse, longitudinal datasets.
-
-
-
-Research Associate; The University of Calgary March 2018 - January 2020 
-
-- Coordinated the daily operations of a multi-university and multi-site clinical research project, collaborating with industry partners: Vivametrica and the Alberta Bone and Joint Health Institute. Priority was to balance stakeholder needs with feasible practices.
-- Built, coordinated, and maintained databases, then queried data and performed longitudinal analyses of variance. Presented these queries to stakeholders and laypeople. 
+- Led the analytics for the Health Economics research lab, focusing on rare diseases and service use across 13 Canadian hospitals.
+- Distilled roughly 2.4M dollars worth of 500 unique test types into actionable outcome profiles, upon which medical or policy decisions can be made.
+- Extracting, transforming, and loading complex data for over 700 unique rare disease patients.
+- Merged datasets for both administrative and governmental data by testing costs, healthcare resource use, and medical chart data.
+- Developed analysis plans for descriptive, classification, regression, and cross-validation analytics on sparse, longitudinal datasets, then executed those plans.
 
 
-Project Coordinator; The University of Calgary September 2016 - December 2017 
+
+Research Associate; _The University of Calgary_ (March 2018 - January 2020)
+
+- Coordinated the daily operations of a multi-university clinical research project across 4 sites in Alberta, collaborating with industry partners: Vivametrica and the Alberta Bone and Joint Health Institute. 
+- The priorities in this position were to independently perform hands-on clinical research, design electronic survey forms, maintain data integrity, and analyse data, while balancing stakeholder needs with best research practices.
+- Built, coordinated, and maintained databases, then queried data and performed longitudinal analyses of variance. Presented these queries to stakeholders (researchers, industry partners) and laypeople . 
+
+
+Research Administrator; _The University of Calgary_ (March 2018 - September 2019)
+
+- Provide administrative support to a cardiac clinical laboratory with 17 principle investigators, through ethical applications, contract support, simplifying financial tracking processes, and database development and support.
+- Managed the ethics procedures for up to 22 concurrent research studies. 
+- Overhauled and systematized the payment tracking systems for clinical trials and recuperated over $100,000. 
+
+\newpage
+
+
+Project Coordinator; _The University of Calgary_ (September 2016 - December 2017)
 
 - In a clinical research lab studying adult brain injury and neurorehabilitation, managed ethics and compliance, and conducted recruitment, surveys and follow-ups to ensure minimal attrition (<10%). 
 - Advised the team on statistical analyses, authored manuscripts for publication, and coordinated multiple research projects. 
 - Collaborated with multiple concurrent research and industry teams. 
-
 
 
 # Education
@@ -97,20 +109,27 @@ tribble(
 
 # Leadership and Volunteer Experience
 
-Bike Tour Leadership Team – Route Coordinator (2017 – Present)
+Bike Tour Leadership Team – Route Coordinator; _Branch Out Neurological Foundation_ (2017 – Present)
 
-Branch Out Neurological Foundation
-
-Spearheaded roadside planning and coordination for an annual bike tour involving 200 cyclists. Responsibilities included route planning, building signage, and procuring donations.
+- Spearheaded roadside planning and coordination for an annual bike tour involving 200 cyclists, over a 100km route from Panorama Mountain Resort, down around Lake Invermere, and back up the mountain. 
+- Responsibilities included route planning, route safety, building over 150 A-Frame signs, and procuring donations.
+- Lead a team of volunteers over months of planning, and over a dynamic and constantly changing set of needs for the duration of the event. 
+- Generate standard operating procedures for year-to-year use.
 
 
 
 # Publications
+__*Seeger, TA*__, (2016) Cortical Excitability after Mild Traumatic Brain Injury in Children (Master’s Thesis, University of Calgary, Calgary, Canada), from http://theses.ucalgary.ca/jspui/handle/11023/2659
 
 
 Degeling K, Tagimacruz T, MacDonald KV, __*Seeger TA*__, Fooks K, Venkataramanan V, Boycott KM, Bernier FP, Mendoza-Londono R, Hartley T, Hayeems RZ, Marshall DA, Care4Rare Canada. Exome Sequencing in the Diagnostic Pathway for Suspected Rare Genetic Diseases: Does the Order of Testing Affect its Cost-Effectiveness? Appl Health Econ Health Policy. 2024 Dec 30. doi: 10.1007/s40258-024-00936-7. Epub ahead of print. PMID: 39739296.
 
+
 __*Seeger TA,*__ Tabor J, Sick S, Schneider KJ, Jenne C, La P, Talai AS, Rajashekar D, Mouches P, Forkert ND, Emery C, Debert CT. The Association of Saliva Cytokines and Pediatric Sports-Related Concussion Outcomes. J Head Trauma Rehabil. 2020 Sep/Oct;35(5):354-362. doi: 10.1097/HTR.0000000000000605. PMID: 32881769.
+
 
 King R & __*Seeger TA*__, Wang M, Li Pi Shan R, McGovern C, Knox J, Patel L, Fung T, Sajobi T, Debert C (2020). Early Supported Discharge for Neurorehabilitation Following Acquired Brain Injury. Frontiers in Neurology, 11(November), 1–9. https://doi.org/10.3389/fneur.2020.596526
 
+
+
+\center Generated in RMarkdown \center
